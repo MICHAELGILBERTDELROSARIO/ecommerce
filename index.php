@@ -1,3 +1,10 @@
+<?php
+session_start();
+if (!isset($_SESSION['logged_in'])) {
+    $_SESSION['logged_in'] = false; // Set default to indicate no user is logged in
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,3 +16,6 @@
   <h1>HOME PAGE</h1>
 </body>
 </html>
+
+<a href="registration.php">Register</a>
+<a href="login.php">Login</a>
